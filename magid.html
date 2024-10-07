@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فيديو ترحيبي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            position: relative;
+            width: 60%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #000;
+            padding-top: 56.25%; /* نسبة العرض إلى الارتفاع 16:9 */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .zoom-controls {
+            margin-top: 20px;
+        }
+        .zoom-controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>أهلاً بك إليك الفيديو</h1>
+
+    <div class="video-container" id="videoContainer">
+        <iframe src="https://t.me/Replit_Python/123" allowfullscreen></iframe>
+    </div>
+
+    <div class="zoom-controls">
+        <button onclick="zoomIn()">تكبير الفيديو</button>
+        <button onclick="zoomOut()">تصغير الفيديو</button>
+    </div>
+
+    <script>
+        const videoContainer = document.getElementById('videoContainer');
+        
+        function zoomIn() {
+            videoContainer.style.width = '80%'; // تكبير الفيديو
+        }
+
+        function zoomOut() {
+            videoContainer.style.width = '60%'; // تصغير الفيديو
+        }
+    </script>
+
+</body>
+</html>
